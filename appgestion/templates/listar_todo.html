@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/listar_todo_articulos/" method="GET">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if articulos %}
+                {% for arti in articulos %}
+                <tr>
+                    <td>{{ arti.nombre  }}</td>
+                    <td>{{ arti.categoria }}</td>
+                    <td>{{ arti.precio }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                 <h2>No existen registros de articulos...</h2>
+                {% endif %}                
+            </tbody>
+        </table>   
+        <input type="submit" value="Listar">
+    </form>
+</body>
+</html>

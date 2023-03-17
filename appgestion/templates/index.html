@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+</head>
+<body>
+    {% include "encabezado.html" %}
+    <img src="{% static 'appgestion/img/tux.jpg' %} " width="100" height="100">
+    <h2>Link de Accesos a Mantenedor</h2>
+    <br>
+    <a href="/ingresar_productos/">Ingresar Articulo</a> <br>
+    <a href="/eliminar_producto/">Eliminar Articulo</a> <br>
+    <a href="/listar_todo/">Listar Articulos</a> <br>
+    <a href="/busqueda_productos/">Buscar Articulo</a> <br>
+    <a href="/modificar_articulo/">Modificar Articulo</a>
+
+
+</body>
+</html>
